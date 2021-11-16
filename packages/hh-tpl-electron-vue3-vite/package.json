@@ -7,8 +7,7 @@
   "license": "ISC",
   "main": "lib/hh-tpl-electron-vue3-vite.js",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "template": "template",
   },
   "files": [
     "lib"
