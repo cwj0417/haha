@@ -46,7 +46,7 @@ if (options.template && options.scripts) {
             init.apply(null, JSON.parse(process.argv[1]));
             `;
             console.log(script);
-            spawn(process.execPath, ['-e', script, '--', template], { stdio: 'inherit' });
+            spawn(process.execPath, ['-e', script, '--', JSON.stringify(template)], { stdio: 'inherit' });
         } else {
             process.exit(code);
         }
