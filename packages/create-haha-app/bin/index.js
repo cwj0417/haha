@@ -44,7 +44,8 @@ if (options.template && options.scripts) {
             const script = `
             const init = require('${scripts}/scripts/init.js');
             init.apply(null, JSON.parse(process.argv[1]));
-            `
+            `;
+            console.log(script);
             spawn(process.execPath, ['-e', script, '--', template], { stdio: 'inherit' });
         } else {
             process.exit(code);

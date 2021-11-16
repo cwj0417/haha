@@ -1,4 +1,4 @@
-module.exports = function (template) {
+module.exports = function () {
     console.log('hi, there was haha-scripts')
-    console.log('template was ', template)
+    console.log('template was')
 }
