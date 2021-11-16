@@ -8,11 +8,8 @@
   "bin": {
     "hh": "bin/index.js"
   },
-  "directories": {
-    "scripts": "scripts"
-  },
   "files": [
-    "lib"
+    "scripts"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com/"

@@ -6,11 +6,8 @@
   "homepage": "",
   "license": "ISC",
   "main": "lib/hh-tpl-electron-vue3-vite.js",
-  "directories": {
-    "template": "template"
-  },
   "files": [
-    "lib"
+    "template"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com/"
