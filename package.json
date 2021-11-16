@@ -1,0 +1,15 @@
+{
+  "name": "haha-cli",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "version": "0.0.1",
+  "description": "fe tool",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cwj",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.22.0"
+  }
+}
