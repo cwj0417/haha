@@ -1,12 +1,12 @@
 {
-  "name": "haha-scripts",
+  "name": "haha-scripts-electron-vue3-vite",
   "version": "0.0.6",
   "description": "> TODO: description",
   "author": "chenwj <731028571@qq.com>",
   "homepage": "",
   "license": "ISC",
   "bin": {
-    "hh": "bin/index.js"
+    "hh-electron-vv": "bin/index.js"
   },
   "files": [
     "scripts"
@@ -20,5 +20,6 @@
   "dependencies": {
     "commander": "^8.3.0"
   },
+  "templateOptions": ["hh-tpl-electron-vue3-vite"],
   "gitHead": "0b83316fcf2eebb1bed8adb8db8739c3d59a05a8"
 }

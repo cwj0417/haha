@@ -10,8 +10,7 @@ let projname = '';
 
 const program = new commander.Command(packageJson.name)
     .arguments('<project-directory>')
-    .option('-t, --template <template>', 'template to use', 'hh-tpl-electron-vue3-vite')
-    .option('-s, --scripts <script>', 'script to use', 'haha-scripts')
+    .option('-s, --scripts <script>', 'script to use', 'haha-scripts-electron-vue3-vite')
     .action((name) => {
         projname = name;
     })
@@ -19,8 +18,8 @@ program.parse(process.argv);
 
 const options = program.opts();
 
-if (options.template && options.scripts) {
-    const { template, scripts } = options;
+if (options.scripts) {
+    const { scripts } = options;
 
     const root = path.resolve(projname);
 
@@ -38,19 +37,17 @@ if (options.template && options.scripts) {
 
     process.chdir(root);
 
-    console.log(projname, template, scripts);
-    spawn('yarnpkg', ['add', template, scripts, '--cwd', root], { stdio: 'inherit' }).on('close', code => {
+    spawn('yarnpkg', ['add', scripts, '--cwd', root], { stdio: 'inherit' }).on('close', code => {
         if (code === 0) {
             const script = `
             const init = require('${scripts}/scripts/init.js');
             init.apply(null, JSON.parse(process.argv[1]));
             `;
-            console.log(script);
-            spawn(process.execPath, ['-e', script, '--', JSON.stringify(template)], { stdio: 'inherit' });
+            spawn(process.execPath, ['-e', script, '--', JSON.stringify([root, projname, process.cwd()])], { stdio: 'inherit' });
         } else {
             process.exit(code);
         }
     });
 } else {
-    console.error('missing template and scripts')
+    console.error('missing scripts')
 }
