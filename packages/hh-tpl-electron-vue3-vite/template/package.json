@@ -1,0 +1,24 @@
+{
+  "name": "electron-vue3-vite",
+  "license": "MIT",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "hh-electron-vv dev",
+    "build": "hh-electron-vv build",
+    "build:arm": "hh-electron-vv build:arm"
+  },
+  "dependencies": {
+    "electron-log": "^4.4.1",
+    "electron-updater": "^4.3.9",
+    "vue": "^3.2.16",
+    "haha-scripts-electron-vue3-vite": "^0.0.6"
+  },
+  "devDependencies": {
+    "electron": "^16.0.1",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.4",
+    "vue-tsc": "^0.3.0",
+    "electron-builder": "^22.13.1"
+  }
+}
