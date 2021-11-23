@@ -14,7 +14,7 @@ module.exports = function (
     spawn('yarnpkg', ['add', tpl, '--cwd', appPath], { stdio: 'inherit' }).on('close', code => {
         if (code === 0) {
             console.log('haha-scripts was installed successfully!')
-            fs.copySync(path.join(__dirname, 'node_modules', tpl, 'template'), appPath)
+            fs.copySync(path.join(__dirname, '..', '..', tpl, 'template'), appPath)
             process.chdir(appPath)
             spawn('yarn', ['install'], { stdio: 'inherit' })
         } else {
