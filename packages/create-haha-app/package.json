@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "commander": "^8.3.0",
-    "cross-spawn": "^7.0.3"
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^10.0.0"
   },
   "gitHead": "0b83316fcf2eebb1bed8adb8db8739c3d59a05a8"
 }
