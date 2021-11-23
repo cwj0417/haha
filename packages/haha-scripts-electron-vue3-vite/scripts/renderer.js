@@ -32,7 +32,7 @@ const rendererBuild = async () => {
             rollupOptions: {
                 input: entries,
             },
-            outDir: join(execRoot, '..', 'dist', 'renderer'),
+            outDir: join(execRoot, 'dist', 'renderer'),
         },
         mode: 'production',
     })

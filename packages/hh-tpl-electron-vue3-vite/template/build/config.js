@@ -4,7 +4,7 @@
  */
 const config = {
   productName: '',
-  appId: 'com.cwj.schedule-pro',
+  appId: 'com.cwj.your-proj-name',
   electronVersion: process.env.ELECTRON_VERSION, // only used for development debugging
   directories: {
     output: 'build/built',
@@ -15,8 +15,8 @@ const config = {
   // set this to your own repo!
   publish: [{
     provider: 'github',
-    owner: 'cwj0417',
-    repo: 'schedule-pro',
+    owner: 'your-github-account',
+    repo: 'your-proj-name',
     releaseType: 'release'
   }],
   files: [

@@ -36,7 +36,7 @@ let prodPlugin = () => ({
         build.onLoad({ filter: /.*/, namespace: 'dev-html' }, (args) => {
             const path = args.path.slice(10).split('#')
             return {
-                contents: `module.exports = require('url').pathToFileURL(require('path').join(process.env.PWD, 'renderer', '${path[0]}')).toString() + '#${path[1]}';`,
+                contents: `module.exports = require('url').pathToFileURL(require('path').join(__dirname, '../renderer', '${path[0]}')).toString() + '#${path[1]}';`,
                 loader: 'js',
             }
         })
@@ -80,7 +80,7 @@ let prodPreloadPlugin = () => ({
             ensureDirSync(join(execRoot, '/dist/main')) // 这里有点拼拼凑凑了. 能用就先不重构了, 等esbuild正式版
             writeFileSync(join(execRoot, '/dist/main', args.path.slice(9)), contents)
             return {
-                contents: `import { join } from 'path'; export default join(process.env.PWD, 'main', '${args.path.slice(9)}')`,
+                contents: `import { join } from 'path'; export default join(__dirname, '${args.path.slice(9)}')`,
                 loader: 'js',
             }
         })

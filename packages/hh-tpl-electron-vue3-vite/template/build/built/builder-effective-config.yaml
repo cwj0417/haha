@@ -3,11 +3,11 @@ directories:
   buildResources: build
   app: dist
 productName: ''
-appId: com.cwj.schedule-pro
+appId: com.cwj.your-proj-name
 publish:
   - provider: github
-    owner: cwj0417
-    repo: schedule-pro
+    owner: your-github-account
+    repo: your-proj-name
     releaseType: release
 files: []
 nsis:
