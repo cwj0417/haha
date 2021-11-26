@@ -1,5 +1,5 @@
 # haha
-private scaffolding tool
+scaffolding tool for rare-found-in-society framework named after my new born child.
 
 # usage
 
